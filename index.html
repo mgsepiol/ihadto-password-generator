@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <h1>iHadTo Password Generator</h1>
+        <div id="passwordDisplay" class="password-display">
+            <span id="passwordText">Your secure password will appear here</span>
+            <button id="copy" class="copy-btn" title="Copy to clipboard"><i class="fas fa-copy"></i></button>
+        </div>
+        
+        <div class="input-group">
+            <label for="length">Password Length:</label>
+            <input type="range" id="length" min="6" max="50" value="12" class="slider">
+            <div id="lengthDisplay" class="length-display">Length: 12</div>
+        </div>
+        
+        <fieldset>
+            <legend>Character Types:</legend>
+            <label><input type="checkbox" id="lowercase" checked> <i class="fas fa-font"></i>&nbsp; Lowercase Letters</label>
+            <label><input type="checkbox" id="uppercase" checked> <i class="fas fa-font fa-lg"></i>&nbsp; Uppercase Letters</label>
+            <label><input type="checkbox" id="numbers" checked> <i class="fa-solid fa-0"></i><i class="fa-solid fa-minus"></i><i class="fas fa-solid fa-9"></i>&nbsp; Numbers</label>
+            <label><input type="checkbox" id="special" checked> <i class="fas fa-hashtag"></i> &nbsp; Special Characters</label>
+        </fieldset>
+
+        <button id="generate">Generate Password</button>
+        <div id="strengthMeter" class="strength-meter"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
